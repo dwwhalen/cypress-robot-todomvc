@@ -30,3 +30,10 @@ cypress/screenshots
 
 # VS Code
 .history
+
+results
+
+# Robot logs
+log.html
+output.xml
+report.html
