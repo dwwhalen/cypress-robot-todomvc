@@ -1,5 +1,6 @@
 This repo was forked from [cypress-example-todomvc](https://github.com/cypress-io/cypress-example-todomvc) and is being used as a sample app for demonstrating the use of [Robot Framework](https://robotframework.org/) for E2E testing.
 
+More details [here](robot-framework/README.md).
 
 # TodoMVC [![Circle CI](https://circleci.com/gh/cypress-io/cypress-example-todomvc.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-todomvc) [![Build status](https://ci.appveyor.com/api/projects/status/6wjyoye82orkkyny/branch/master?svg=true)](https://ci.appveyor.com/project/cypress-io/cypress-example-todomvc/branch/master)
  [![renovate-app badge][renovate-badge]][renovate-app]
