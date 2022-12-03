@@ -20,15 +20,15 @@ pip install robotframework
 robot --version
 ```
 
-# Sections of a test suite file:
-Variables
-Settings (Library, Resource, Suite Setup, Suite Teardown)
-Keywords 
-Suite Setup
-Test cases
-Suite teardown
+# Sections of a test suite file
+- Variables
+- Settings (Library, Resource, Suite Setup, Suite Teardown)
+- Keywords 
+- Suite Setup
+- Test cases
+- Suite teardown
 
-# Running a Robot Test Suite
+# Running a Robot test suite
 `robot robot-framework/Calculator_Test_Suite.robot`
 
 `robot robot-framework/ToDos_suite.robot`
