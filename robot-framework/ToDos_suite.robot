@@ -38,3 +38,18 @@ Make sure that new ToDos are correctly added to the list
     Then the ToDo item is added to the to the list  ${TODO_ITEM_ONE}  1
     And the user enters new ToDo  ${TODO_ITEM_TWO}
     Then the ToDo item is added to the to the list  ${TODO_ITEM_TWO}  2
+
+Create several todos then check the number of items in the list
+    When the user enters new ToDo  Item One
+    When the user enters new ToDo  Item Two
+    When the user enters new ToDo  Item Three
+    When the user enters new ToDo  Item Four
+    Then the ToDo count is  4
+
+Verify text input field is cleared wwhen an item is added
+    #   cy.get('.new-todo')
+    #   .type(TODO_ITEM_ONE)
+    #   .type('{enter}')
+    #   cy.get('.new-todo').should('have.text', '')
+    When the user enters new ToDo  Some New Item
+    Then the new ToDo field texbox should be empty

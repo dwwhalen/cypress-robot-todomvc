@@ -30,3 +30,6 @@ the ToDo item is added to the to the list
     [Arguments]  ${expected_todo_text}  ${expected_list_position}
     ${actual_todo_text}=  SeleniumLibrary.Get Element Attribute   (//ul[@class='todo-list']/li//input[@class='edit'])[${expected_list_position}]  value
     Should Be Equal As Strings  ${expected_todo_text}  ${actual_todo_text}
+
+the new ToDo field texbox should be empty
+    Element Text Should Be  class: new-todo  ${EMPTY}
