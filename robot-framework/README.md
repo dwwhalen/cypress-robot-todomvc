@@ -28,6 +28,9 @@ robot --version
 - Test cases
 - Suite teardown
 
+# starting the ToDo application
+`npm run start`
+
 # Running a Robot test suite
 `robot robot-framework/Calculator_Test_Suite.robot`
 

@@ -35,5 +35,6 @@ results
 
 # Robot logs
 log.html
-output.xml
+*output.xml
 report.html
+selenium*png
