@@ -1,6 +1,6 @@
-# BLOG 1
+# Test Automation With Robot Framework
 
-As a test automation engineer, I've had an awareness of [Robot Framework](http://robotframework.org/) for some time, but have never explored it's capabilities.  Until now.  
+As a test automation engineer, I've had an awareness of [Robot Framework](http://robotframework.org/) for some time, but I have never explored it's capabilities.  Until now.  
 
 I recently decided to spend a little time familiarizing myself with Robot Framework's capabilities, and that's what I want to cover in this series of posts.
 
@@ -42,7 +42,7 @@ How do we want to test this app?  I'm sure plenty of things come to mind.  Since
 My Robot Framework test is going to be in a single text file, named `BasicTest.robot`.  This file is referred to as a "test suite" and can be composed of a number of sections.  My first test is going to have 3 sections:
 
 ### *** Settings *** section
-The first section of my test file is the Settings section.  The Settings section is used to reference external files needed for the test.  For my test it will reference my external app, which is just the Calculator python function described above.  So section 1 of the test suite  looks like this:
+The first section of my test file is the Settings section.  The Settings section is used to reference external files needed for the test.  For my test it will reference my external app, which is just the Calculator python function described above.  So the Settings section looks like this:
 ```python
 *** Settings ***
 Library    ../libraries/MyCalculatorApplication.py
@@ -54,7 +54,7 @@ One thing to mention here.  If you work with Robot Framework for very long, you'
 
 ### *** Test Cases *** section
 The Test Cases section describes the test case.  In this example we have one test case, named `Test some basics of my calculator application`.
-```
+```python
 *** Test Cases ***
 Test some basics of my calculator application
     Log To Console    Starting test
@@ -86,18 +86,19 @@ The **1st line** is the name of the keyword (`Verify app calculation`), and it m
 
 The **2nd line** identifies the arguments/parameters for the keyword.  In our example that's the mathematical term and the expected result of the calculation.
 
-The **3rd line** is just using the `Log to Console' builtin keyword to log some info to the console.  Your custom keywords can and should leverage builtin keywords.
+The **3rd line** is just using the `Log to Console` builtin keyword to log some info to the console.  Your custom keywords can and should leverage builtin keywords where appropriate.
 
-The **4th line** might seem a little tricky.  remember our Calculator application has one method, named `do_math`.  This 4th line is calling `do_math` and passing the mathematical term.  `do_math` will return the  result of the calculation.  We are setting the `${actual}` variable to the actual value returned from `do_math`.
+The **4th line** might seem a little tricky.  Remember our Calculator application has one method, named `do_math`.  This 4th line is calling `do_math` and passing the mathematical term.  `do_math` will return the  result of the calculation.  We are setting the `${actual}` variable to the value returned from `do_math`.
 
 The **5th line** is more logging.
 
-The **6th line**, ok almost there!  Remember, this keyword is being used to verify that the actual result returned from the calculator matches our expected result.  We now have the expected result, and the **6th line** is using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
+The **6th line**, ok almost there!  Remember, this `Verify app calculation` keyword is being used to verify that the actual result returned from the calculator matches our expected result.  To do this we're using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
 
 I should also point out, the keywords are usually stored in a separate `keywords` file, and not in the same file as the test suite.  This allows them to be easily referenced by other Robot test suites.  
 
 And that's it.  Our complete test file `BasicTest.robot` looks like this:
-```
+
+```python
 *** Settings ***
 Library    ../libraries/MyCalculatorApplication.py
 
@@ -124,5 +125,9 @@ robot BasicTest.robot
 
 And this is what is looks like in the console when we run the test:
 
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y2n1xnbnnyxfv688pr27.png)
+ 
+<br/><br/><br/><br/>
 
-Check out the next post to get this test running on your own machine!
+## Wrap up
+Check out the next post to get this test running on your own machine, and much more!
