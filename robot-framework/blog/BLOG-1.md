@@ -66,7 +66,7 @@ Let's take a closer look at these 2 lines.
 
 `Log to Console` is a Robot [builtin keyword](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html).  The keyword is all I need in my test to log a message to the console.
 
-`Verify app calculation` is NOT a builtin keyword.  This is a custom keyword I have created specifically for my test, and the detail around it can be found in the Keywords.
+`Verify app calculation` is NOT a builtin keyword.  This is a custom keyword I have created specifically for my test, and the implementation details can be found in the Keywords section.
 
 ### *** Keywords *** section
 The Keywords section gives us the capability to create custom keywords by combining existing keywords.  These can be considered user-defined keywords, as the automation developer has complete control.
@@ -92,7 +92,7 @@ The **4th line** might seem a little tricky.  remember our Calculator applicatio
 
 The **5th line** is more logging.
 
-The **6th line**, ok almost there!  Remember, this keyword is being used to verify that the actual result returned from the calculator matches our expected result.  We now have the expected result, so the **6th line** is using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
+The **6th line**, ok almost there!  Remember, this keyword is being used to verify that the actual result returned from the calculator matches our expected result.  We now have the expected result, and the **6th line** is using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
 
 I should also point out, the keywords are usually stored in a separate `keywords` file, and not in the same file as the test suite.  This allows them to be easily referenced by other Robot test suites.  
 
