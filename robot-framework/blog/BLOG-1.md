@@ -94,6 +94,8 @@ The 5th line is more logging.
 
 Almost there!  Remember, this keyword is being used to verify that the actual result returned from the calculator matches our expected result.  We now have the expected result, so the 6th line is using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
 
+I should also point out, the keywords are usually stored in a separate `keywords` file, and not in the test suite.  This allows them to be easily referenced by other Robot test suites.  
+
 And that's it.  Our complete test file `BasicTest.robot` looks like this:
 ```
 *** Settings ***
