@@ -62,9 +62,9 @@ Test some basics of my calculator application
 ```
 Hopefully it's clear what's going on with these 2 lines.  We are logging a message to the console when the test starts, and then verifying that the app returns "2" when we ask it what "1 + 1" is.  
 
-Let's take a closer look at these 2 lines. 
+Let's take a closer look at the keywords in these 2 lines. 
 
-`Log to Console` is a Robot [builtin keyword](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html).  The keyword is all I need in my test to log a message to the console.
+`Log to Console` is a Robot [builtin keyword](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html).  The keyword is all I need to log a message to the console.
 
 `Verify app calculation` is NOT a builtin keyword.  This is a custom keyword I have created specifically for my test, and the implementation details can be found in the Keywords section.
 
