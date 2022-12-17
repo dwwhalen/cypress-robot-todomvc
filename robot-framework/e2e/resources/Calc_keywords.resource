@@ -1,10 +1,9 @@
 *** Settings ***
-Library         ../libraries/Calculator.py
+Library         ../libraries/MyCalculatorApplication.py
 
 *** Keywords ***
 The Calculator Is Running
     Log  Opening Calculator  INFO  False  True
-    Start Calculator
 
 The user calculates "${term}"
     Log To Console  Entering ${term}
