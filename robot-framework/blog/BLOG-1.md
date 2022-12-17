@@ -53,23 +53,23 @@ Pretty self-explanatory.  We are just giving a relative reference to the python 
 One thing to mention here.  If you work with Robot Framework for very long, you'll quickly learn that spacing and positioning are very important.  The `*** Settings ***` header needs to be left-justified, `Library` needs to be left-justified, and there must be 2 or more spaces after `Library` (or a tab). 
 
 ### *** Test Cases *** section
-
+The Test Cases section describes the test case.  In this example we have one test case, named `Test some basics of my calculator application`.
 ```
 *** Test Cases ***
 Test some basics of my calculator application
     Log To Console    Starting test
     Verify app calculation    1 + 1    2
 ```
-Our next section describes the test case.  Hopefully it's clear what's going on here.  We are logging a message to the console when the test starts, and then verifying that the app returns "2" when we ask it what "1 + 1" is.  
+Hopefully it's clear what's going on with these 2 lines.  We are logging a message to the console when the test starts, and then verifying that the app returns "2" when we ask it what "1 + 1" is.  
 
-Let's look at these 2 lines a little more. 
+Let's take a closer look at these 2 lines. 
 
 `Log to Console` is a Robot [builtin keyword](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html).  The keyword is all I need in my test to log a message to the console.
 
-`Verify app calculation` is NOT a builtin function.  This is a custom keyword I have created specifically for my test, and the detail around it can be found in the final section of our test file.
+`Verify app calculation` is NOT a builtin keyword.  This is a custom keyword I have created specifically for my test, and the detail around it can be found in the Keywords.
 
 ### *** Keywords *** section
-Robot Framework gives us the capability to create new higher-lever keywords by combining existing keywords.  These can be considered user-defined keywords, as the automation developer has complete control.
+The Keywords section gives us the capability to create custom keywords by combining existing keywords.  These can be considered user-defined keywords, as the automation developer has complete control.
 
 Take a look at my `Verify app calculation` keyword and see if it makes sense:
 ```python
@@ -84,15 +84,15 @@ Verify app calculation
 
 The **1st line** is the name of the keyword (`Verify app calculation`), and it must be left justified.
 
-The **2nd line** identifies the arguments/parameters for the keyword.  In our example that's the mathematical term and the expected result from the calculator.
+The **2nd line** identifies the arguments/parameters for the keyword.  In our example that's the mathematical term and the expected result of the calculation.
 
 The **3rd line** is just using the `Log to Console' builtin keyword to log some info to the console.  Your custom keywords can and should leverage builtin keywords.
 
-The **4th line** might seem a little tricky.  Our Calculator application has one method, named do_math.  This 4th line is calling the Calculator application method and passing the mathematical term.  The method should return the actual result of the calculation.  We are setting the `${actual}` variable to the actual value returned from our app.
+The **4th line** might seem a little tricky.  remember our Calculator application has one method, named `do_math`.  This 4th line is calling `do_math` and passing the mathematical term.  `do_math` will return the  result of the calculation.  We are setting the `${actual}` variable to the actual value returned from `do_math`.
 
 The **5th line** is more logging.
 
-Almost there!  Remember, this keyword is being used to verify that the actual result returned from the calculator matches our expected result.  We now have the expected result, so the **6th line** is using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
+The **6th line**, ok almost there!  Remember, this keyword is being used to verify that the actual result returned from the calculator matches our expected result.  We now have the expected result, so the **6th line** is using another builtin keyword (`Should Be Equal As Numbers`) to assert that the actual result matches the expected result.
 
 I should also point out, the keywords are usually stored in a separate `keywords` file, and not in the same file as the test suite.  This allows them to be easily referenced by other Robot test suites.  
 
