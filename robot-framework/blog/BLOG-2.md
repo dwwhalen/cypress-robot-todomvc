@@ -1,4 +1,4 @@
-# Running Your First Robot Framework Test
+# Running Your First Robot Test
 
 ## Installing Robot
 
@@ -21,22 +21,20 @@ If you're using Visual Studio code, I highly recommend 2 Extensions:
 [image here]
 
 ## My sample repo
-I have a repo with all my sample code for my Robot Framework posts.  You can clone it from [here](https://github.com/dwwhalen/cypress-robot-todomvc).
+I have a repo with sample code that I will reference.  You can clone it from [here](https://github.com/dwwhalen/cypress-robot-todomvc).
 
-This repo was actually cloned from a Cypress sample app.  I'll be using more of that in my next post, but for now you can just clone the repo and ignore about 99% of it.
+This repo was actually forked from a Cypress sample app.  I'll be using more of that in my next post, but for now you can just clone the repo and ignore about 99% of it.
 
-Once you have it cloned take a look at the file [robot-framework/e2e/suites/BasicTest.robot](https://github.com/dwwhalen/cypress-robot-todomvc/blob/master/robot-framework/e2e/suites/BasicTest.robot)
+Once you have it cloned take a look at the file [robot-framework/e2e/suites/BasicTest.robot](https://github.com/dwwhalen/cypress-robot-todomvc/blob/master/robot-framework/e2e/suites/BasicTest.robot).
 
 If you read the first post, this Robot test should look familiar.  This is the test for our calculator app!
 
-### Breaking into multiple parts
-This test is a bit different from what we saw in the first post.  
+### Breaking the test into multiple files
+This test is a bit different from what we saw in the first post.  Robot test suites will usually reference keyword resources in a separate file, and that's what I've done in the sample code.  
 
-Robot test suites will usually reference keyword resources in a file separate, and that's what I've done in the sample code.  
+Now our test suite just has the tests, with a reference to the user keywords in a separate resource file.
 
-Now our test suite just has the tests, with a reference to the my user keywords in a separate resource files  
-
-This makes the test more readable and helps to encourage reuse across tests suites.  Here's our test suite:
+This makes the test more readable and helps to encourage keyword reuse across tests suites.  So here's our test suite (with some more calculation tests added):
 ``` python
 *** Settings ***
 Resource        ../resources/calc.resource
@@ -77,8 +75,18 @@ robot robot-framework/e2e/suites/BasicTest.robot
 Hopefully you'll have test results that look like this:
 
 [image here]
+
 ### Reporting
+In addition to the test results in the console, Robt Framework has also created an html report for the test run.  After you run the test you should see the file `report.html` in the root directory.
 
+If you drill into the basic test you'll see some details like this:
+[image here]
 
+Of course the reporting is usually more important when we have failures.  Go ahead a break the test yourself and see how Robot Framework deals with that.
 
+### What's next?
+Hopefully you were able to get the test running locally.  That will allow you to start experimenting, which is when things get real interesting.  
 
+In the next post we will bid a fond farewell to our simple calculator app, and create tests for an actual website.  
+
+Thanks for reading!
