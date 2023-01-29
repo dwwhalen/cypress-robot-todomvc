@@ -1,4 +1,4 @@
-# Running Your First Robot Test
+# Running Your First Robot Framework Test
 
 In my [first Robot Framework post](https://dev.to/leading-edje/test-automation-with-robot-framework-2idc) I gave a brief overview of Robot Framework and described a sample test.  Now it's time for you to get the tests running!
 

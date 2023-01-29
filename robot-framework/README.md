@@ -9,6 +9,8 @@ Robot Framework is implemented using Python and is OS independent.
 
 [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 
+[Selenium Library](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+
 [Selenium Library Keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
 
 # Installing Robot Framework
@@ -27,11 +29,3 @@ robot --version
 - Suite Setup
 - Test cases
 - Suite teardown
-
-# starting the ToDo application
-`npm run start`
-
-# Running a Robot test suite
-`robot robot-framework/e2e/suites/BasicTest.robot`
-
-`robot robot-framework/ToDos_suite.robot`
