@@ -9,6 +9,7 @@ This repo was forked from [cypress-example-todomvc](https://github.com/cypress-i
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5rmqcja2l2o7ygm6p8hc.png)
 
 `robot robot-framework/ToDos_suite.robot`
+`robot robot-framework/ToDos_basic_gherkin.robot`
 
 More details [here](robot-framework/README.md).
 

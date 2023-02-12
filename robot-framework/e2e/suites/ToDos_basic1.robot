@@ -6,7 +6,7 @@ ${URL}      http://localhost:8888
 ${BROWSER}      Chrome
 
 ***Test Case***
-Open ToDo Page
+Add a new ToDo item
   Open Browser    ${URL}  ${BROWSER}
   Page Should Not Contain Element  //section[@class='main']
   Input text  class: new-todo  Finish This Blog Post
