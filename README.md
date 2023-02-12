@@ -6,7 +6,7 @@ This repo was forked from [cypress-example-todomvc](https://github.com/cypress-i
 # Running a Robot test suite
 `robot robot-framework/e2e/suites/BasicTest.robot`
 
- `robot robot-framework/e2e/suites/ToDos_basic1.robot`
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5rmqcja2l2o7ygm6p8hc.png)
 
 `robot robot-framework/ToDos_suite.robot`
 

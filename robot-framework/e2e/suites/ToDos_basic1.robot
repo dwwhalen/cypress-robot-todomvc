@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource        ToDos_keywords.resource
 
 *** Variables ***
 ${URL}      http://localhost:8888
@@ -16,3 +15,4 @@ Open ToDo Page
   ${actual_count}=  SeleniumLibrary.Get Element Count  //ul[@class='todo-list']/li
   ${expected_count_number}=  Convert To Number  1
   Should Be Equal  ${expected_count_number}  ${actual_count}
+  Sleep  10
