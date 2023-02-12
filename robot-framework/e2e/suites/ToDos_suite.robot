@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ToDos_keywords.resource
+Resource        ../resources/ToDos_keywords.resource
 Test Setup  Given the User accesses the Home page
 
 *** Variables ***
